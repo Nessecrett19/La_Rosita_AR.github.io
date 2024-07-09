@@ -16,14 +16,18 @@
       	
       <a-assets>
         
-        <a-asset-item id="modelo" src="queso_asadero.glb"></a-asset-item>
-       
+        <a-asset-item id="modelo" src="blossoming_boombox.glb"></a-asset-item>
+        <a-asset-item id="modelo1" src="cartoon_whale.glb"></a-asset-item>
+        <a-asset-item id="modelo2" src="little_cute_frog_tin.glb"></a-asset-item>
+     	<a-asset-item id="modelo3" src="mushroom_potion.glb"></a-asset-item>
 	
 	
 	
 
 	<audio id="sound" src="Ansiedad_Generalizada.mp3" preload="auto"></audio>
-	
+	<audio id="sound1" src="TOC.mp3" preload="auto"></audio>
+	<audio id="sound2" src="TEPT.mp3" preload="auto"></audio>
+	<audio id="sound3" src="Fobia_Especifica.mp3" preload="auto"></audio>
 	
 	
 	
@@ -42,14 +46,34 @@
 	</a-marker>
 			
 			
-	
+	<a-marker id="dos" type="barcode" value="3" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+				
+	<a-entity gltf-model="#modelo1" scale="2 2 2" rotation="-90 0 0" class="clickable" gesture-handler soundhandler></a-entity>
+			
+	</a-marker>
+      
+       <a-marker id="tres" type="barcode" value="4" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+					
+        <a-entity gltf-model="#modelo2" scale="0.4 0.4 0.4" rotation="-90 0 0" class="clickable" gesture-handler soundhandler></a-entity>
+			
+	</a-marker>
+      
+      <a-marker id="cuatro" type="barcode" value="7" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+			
+      <a-entity gltf-model="#modelo3" scale="1 1 1" rotation="-90 0 0" class="clickable" gesture-handler soundhandler></a-entity>
+        
+			
+       </a-marker>
 
 	
 	
 	
 			
 			<a-entity id="audio1" sound="src: #sound" autoplay="false"></a-entity>
-			
+			<a-entity id="audio2" sound="src: #sound1" autoplay="false"></a-entity>
+			<a-entity id="audio3" sound="src: #sound2" autoplay="false"></a-entity>
+			<a-entity id="audio4" sound="src: #sound3" autoplay="false"></a-entity>
+	       		
 	       		
 	       		
 			<a-entity camera></a-entity>
