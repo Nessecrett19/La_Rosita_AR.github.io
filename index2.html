@@ -21,16 +21,16 @@
         <a-asset-item id="modelo1" src="queso_ranchero.glb"></a-asset-item>
         <a-asset-item id="modelo2" src="doble_crema_2.glb"></a-asset-item>
      	<a-asset-item id="modelo3" src="queso_rayado_rosita.glb"></a-asset-item>
-	
-	
+	<a-asset-item id="modelo4" src="queso_rayado_chepina.glb"></a-asset-item>
+	<a-asset-item id="modelo5" src="crema_natural_001.glb"></a-asset-item>
 	
 
 	<audio id="sound" src="Asadero rosita.m4a" preload="auto"></audio>
 	<audio id="sound1" src="Queso rancho.m4a" preload="auto"></audio>
 	<audio id="sound2" src="Doble crema.m4a" preload="auto"></audio>
 	<audio id="sound3" src="Rayado rosita.m4a" preload="auto"></audio>
-	
-	
+	<audio id="sound4" src="Chepina.m4a" preload="auto"></audio>
+	<audio id="sound5" src="Crema natural.m4a" preload="auto"></audio>
 	
       
       
@@ -66,7 +66,19 @@
 			
        </a-marker>
 
-	
+	<a-marker id="cinco" type="barcode" value="10" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+			
+      <a-entity gltf-model="#modelo4" scale="1 1 1" rotation="180 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
+        
+			
+       </a-marker>
+
+	<a-marker id="seis" type="barcode" value="30" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+			
+      <a-entity gltf-model="#modelo5" scale="1 1 1" rotation="180 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
+        
+			
+       </a-marker>
 	
 	
 			
@@ -74,8 +86,8 @@
 			<a-entity id="audio2" sound="src: #sound1" autoplay="false"></a-entity>
 			<a-entity id="audio3" sound="src: #sound2" autoplay="false"></a-entity>
 			<a-entity id="audio4" sound="src: #sound3" autoplay="false"></a-entity>
-	       		
-	       		
+	       		<a-entity id="audio5" sound="src: #sound4" autoplay="false"></a-entity>
+	       		<a-entity id="audio6" sound="src: #sound5" autoplay="false"></a-entity>
 	       		
 			<a-entity camera></a-entity>
 			
@@ -89,8 +101,8 @@ var entity = document.querySelector('#audio1');
 var entity2 = document.querySelector('#audio2');
 var entity3 = document.querySelector('#audio3');
 var entity4 = document.querySelector('#audio4');
-
-
+var entity5 = document.querySelector('#audio5');
+var entity6 = document.querySelector('#audio6');
 
 
 
@@ -98,8 +110,9 @@ if (document.querySelector('#uno').object3D.visible == true) {
 entity2.components.sound.pauseSound();
 entity3.components.sound.pauseSound();
 entity4.components.sound.pauseSound();
-
-
+entity5.components.sound.pauseSound();
+entity6.components.sound.pauseSound();
+	
 entity.components.sound.playSound();
 
 } 
@@ -107,6 +120,8 @@ else if (document.querySelector('#dos').object3D.visible == true) {
 entity.components.sound.pauseSound();
 entity3.components.sound.pauseSound();
 entity4.components.sound.pauseSound();
+entity5.components.sound.pauseSound();
+entity6.components.sound.pauseSound();
 
 
 entity2.components.sound.playSound();
@@ -116,6 +131,8 @@ else if (document.querySelector('#tres').object3D.visible == true) {
 entity2.components.sound.pauseSound();
 entity.components.sound.pauseSound();
 entity4.components.sound.pauseSound();
+entity5.components.sound.pauseSound();
+entity6.components.sound.pauseSound();
 
 
 entity3.components.sound.playSound();
@@ -125,12 +142,35 @@ else if (document.querySelector('#cuatro').object3D.visible == true) {
 entity2.components.sound.pauseSound();
 entity.components.sound.pauseSound();
 entity3.components.sound.pauseSound();
+entity5.components.sound.pauseSound();
+entity6.components.sound.pauseSound();
 
 
 entity4.components.sound.playSound();
 
 }
+else if (document.querySelector('#cinco').object3D.visible == true) {
+entity2.components.sound.pauseSound();
+entity.components.sound.pauseSound();
+entity3.components.sound.pauseSound();
+entity4.components.sound.pauseSound();
+entity6.components.sound.pauseSound();
 
+
+entity5.components.sound.playSound();
+
+}
+else if (document.querySelector('#seis').object3D.visible == true) {
+entity2.components.sound.pauseSound();
+entity.components.sound.pauseSound();
+entity3.components.sound.pauseSound();
+entity4.components.sound.pauseSound();
+entity5.components.sound.pauseSound();
+
+
+entity6.components.sound.playSound();
+
+}
 
 
 else{
@@ -138,8 +178,8 @@ entity.components.sound.pauseSound();
 entity2.components.sound.pauseSound();
 entity3.components.sound.pauseSound();
 entity4.components.sound.pauseSound();
-
-
+entity5.components.sound.pauseSound();
+entity6.components.sound.pauseSound();
 
  }
 }
