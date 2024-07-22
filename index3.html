@@ -19,8 +19,7 @@
         <a-asset-item id="modelo" src="QUESILLO_CHEPINA.glb"></a-asset-item>
         <a-asset-item id="modelo1" src="QUESILLO_GAMEZ.glb"></a-asset-item>
         <a-asset-item id="modelo2" src="queso_rayado_gamez.glb"></a-asset-item>
-	<a-asset-item id="modelo3-obj" src="REQUESON_V2.obj"></a-asset-item>
-	<a-asset-item id="modelo3-mtl" src="REQUESON_V2.mtl"></a-asset-item>
+	<a-asset-item id="modelo3" src="REQUESON_V2.glb"></a-asset-item>
 	<a-asset-item id="modelo4-obj" src="QUESO_CREMA.obj"></a-asset-item>
 	<a-asset-item id="modelo4-mtl" src="QUESO_CREMA.mtl"></a-asset-item>
 
@@ -65,8 +64,8 @@
       
        <a-marker id="cuatro" type="barcode" value="4" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
 					
-	<a-entity obj-model="obj: url(REQUESON_V2.obj); mtl: url(REQUESON_V2.mtl)" scale="1 1 1" rotation="-0 90 0" class="clickable" gesture-handler soundhandler></a-entity>
-		
+	 <a-entity gltf-model="#modelo3" scale="1 1 1" rotation="-0 90 0" class="clickable" gesture-handler soundhandler></a-entity>
+	       
 	</a-marker>
       
       <a-marker id="cinco" type="barcode" value="5" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
