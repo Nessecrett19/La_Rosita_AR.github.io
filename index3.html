@@ -16,12 +16,16 @@
       	
       <a-assets>
         
-        <a-asset-item id="modelo" src="queso_asadero.glb"></a-asset-item>
-        <a-asset-item id="modelo1" src="queso_ranchero.glb"></a-asset-item>
-        <a-asset-item id="modelo2" src="doble_crema_2.glb"></a-asset-item>
-     	<a-asset-item id="modelo3" src="queso_rayado_rosita.glb"></a-asset-item>
-	<a-asset-item id="modelo4" src="queso_rayado_chepina.glb"></a-asset-item>
-	<a-asset-item id="modelo5" src="crema_natural_001.glb"></a-asset-item>
+        <a-asset-item id="modelo" src="QUESILLO_CHEPINA.glb"></a-asset-item>
+        <a-asset-item id="modelo1" src="QUESILLO_GAMEZ.glb"></a-asset-item>
+        <a-asset-item id="modelo2" src="queso_rayado_gamez.glb"></a-asset-item>
+	<a-asset-item id="modelo3" src="REQUESON_V2.obj"></a-asset-item>
+	<a-asset-item id="modelo3_mtl" src="REQUESON_V2.mtl"></a-asset-item>
+	<a-asset-item id="modelo4" src="QUESO_CREMA.obj"></a-asset-item>
+	<a-asset-item id="modelo4_mtl" src="QUESO_CREMA.mtl"></a-asset-item>
+
+ 
+     	
 	
 
 	<audio id="sound" src="Asadero rosita.m4a" preload="auto"></audio>
@@ -37,7 +41,7 @@
 		
       
 		
-	<a-marker id="uno" type="barcode" value="20" raycaster="objects: .clickable" emitevents="true"
+	<a-marker id="uno" type="barcode" value="1" raycaster="objects: .clickable" emitevents="true"
 	 cursor="fuse: false; rayOrigin: mouse;">
 			
 		
@@ -46,38 +50,35 @@
 	</a-marker>
 			
 			
-	<a-marker id="dos" type="barcode" value="28" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+	<a-marker id="dos" type="barcode" value="2" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
 				
 	<a-entity gltf-model="#modelo1" scale="1 1 1" rotation="-0 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
 			
 	</a-marker>
+	       
+	<a-marker id="cinco" type="barcode" value="3" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+			
+      <a-entity gltf-model="#modelo2" scale="1 1 1" rotation="180 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
+        
+			
+       </a-marker>
       
-       <a-marker id="tres" type="barcode" value="38" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+       <a-marker id="tres" type="barcode" value="4" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
 					
-        <a-entity gltf-model="#modelo2" scale="1 1 1" rotation="-0 90 0" class="clickable" gesture-handler soundhandler></a-entity>
+        <a-entity obj-model="obj: #modelo3; mtl: #modelo3_mtl" scale="1 1 1" rotation="-0 90 0" class="clickable" gesture-handler soundhandler></a-entity>
 			
 	</a-marker>
       
-      <a-marker id="cuatro" type="barcode" value="17" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+      <a-marker id="cuatro" type="barcode" value="5" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
 			
-      <a-entity gltf-model="#modelo3" scale="1 1 1" rotation="180 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
+      <a-entity obj-model="obj: #modelo4; mtl: #modelo4_mtl" scale="1 1 1" rotation="180 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
         
 			
        </a-marker>
 
-	<a-marker id="cinco" type="barcode" value="10" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-			
-      <a-entity gltf-model="#modelo4" scale="1 1 1" rotation="180 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
-        
-			
-       </a-marker>
+	
 
-	<a-marker id="seis" type="barcode" value="30" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
-			
-      <a-entity gltf-model="#modelo5" scale="1 1 1" rotation="180 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
-        
-			
-       </a-marker>
+	
 	
 	
 			
@@ -86,7 +87,7 @@
 			<a-entity id="audio3" sound="src: #sound2" autoplay="false"></a-entity>
 			<a-entity id="audio4" sound="src: #sound3" autoplay="false"></a-entity>
 	       		<a-entity id="audio5" sound="src: #sound4" autoplay="false"></a-entity>
-	       		<a-entity id="audio6" sound="src: #sound5" autoplay="false"></a-entity>
+	       		
 	       		
 			<a-entity camera></a-entity>
 			
@@ -101,7 +102,7 @@ var entity2 = document.querySelector('#audio2');
 var entity3 = document.querySelector('#audio3');
 var entity4 = document.querySelector('#audio4');
 var entity5 = document.querySelector('#audio5');
-var entity6 = document.querySelector('#audio6');
+
 
 
 
@@ -110,7 +111,7 @@ entity2.components.sound.pauseSound();
 entity3.components.sound.pauseSound();
 entity4.components.sound.pauseSound();
 entity5.components.sound.pauseSound();
-entity6.components.sound.pauseSound();
+
 	
 entity.components.sound.playSound();
 
@@ -120,7 +121,7 @@ entity.components.sound.pauseSound();
 entity3.components.sound.pauseSound();
 entity4.components.sound.pauseSound();
 entity5.components.sound.pauseSound();
-entity6.components.sound.pauseSound();
+
 
 
 entity2.components.sound.playSound();
@@ -131,7 +132,7 @@ entity2.components.sound.pauseSound();
 entity.components.sound.pauseSound();
 entity4.components.sound.pauseSound();
 entity5.components.sound.pauseSound();
-entity6.components.sound.pauseSound();
+
 
 
 entity3.components.sound.playSound();
@@ -142,7 +143,6 @@ entity2.components.sound.pauseSound();
 entity.components.sound.pauseSound();
 entity3.components.sound.pauseSound();
 entity5.components.sound.pauseSound();
-entity6.components.sound.pauseSound();
 
 
 entity4.components.sound.playSound();
@@ -158,18 +158,7 @@ entity6.components.sound.pauseSound();
 
 entity5.components.sound.playSound();
 
-}
-else if (document.querySelector('#seis').object3D.visible == true) {
-entity2.components.sound.pauseSound();
-entity.components.sound.pauseSound();
-entity3.components.sound.pauseSound();
-entity4.components.sound.pauseSound();
-entity5.components.sound.pauseSound();
 
-
-entity6.components.sound.playSound();
-
-}
 
 
 else{
@@ -178,7 +167,7 @@ entity2.components.sound.pauseSound();
 entity3.components.sound.pauseSound();
 entity4.components.sound.pauseSound();
 entity5.components.sound.pauseSound();
-entity6.components.sound.pauseSound();
+
 
  }
 }
