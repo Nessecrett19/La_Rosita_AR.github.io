@@ -20,9 +20,8 @@
         <a-asset-item id="modelo1" src="QUESILLO_GAMEZ.glb"></a-asset-item>
         <a-asset-item id="modelo2" src="queso_rayado_gamez.glb"></a-asset-item>
 	<a-asset-item id="modelo3" src="REQUESON_V2.glb"></a-asset-item>
-	<a-asset-item id="modelo4-obj" src="QUESO_CREMA.obj"></a-asset-item>
-	<a-asset-item id="modelo4-mtl" src="QUESO_CREMA.mtl"></a-asset-item>
-
+	<a-asset-item id="modelo4" src="QUESO_CREMA.glb"></a-asset-item>
+	
  
      	
 	
@@ -70,7 +69,7 @@
       
       <a-marker id="cinco" type="barcode" value="5" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
 			
-      <a-entity obj-model="obj: #modelo4-obj; mtl: #modelo4-mtl" scale="1 1 1" rotation="180 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
+      <a-entity gltf-model="#modelo4" scale="1 1 1" rotation="180 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
         
 			
        </a-marker>
