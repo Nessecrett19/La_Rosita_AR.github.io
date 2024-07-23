@@ -25,6 +25,7 @@
 	<a-asset-item id="modelo5" src="crema_natural_001.glb"></a-asset-item>
 	<a-asset-item id="modelo6" src="QUESILLO_GAMEZ.glb"></a-asset-item>
 	<a-asset-item id="modelo7" src="QUESILLO_CHEPINA.glb"></a-asset-item>
+	<a-asset-item id="modelo8" src="queso_rayado_gamez.glb"></a-asset-item>
 	
 
 	<audio id="sound" src="Asadero rosita.m4a" preload="auto"></audio>
@@ -35,7 +36,7 @@
 	<audio id="sound5" src="Crema natural.m4a" preload="auto"></audio>
 	<audio id="sound6" src="ASADERO_GAMEZ.m4a" preload="auto"></audio>
 	<audio id="sound7" src="QUESO_CHEPINA_REAL.m4a" preload="auto"></audio>
-      
+      	<audio id="sound8" src="RALLADO_GAMEZ.mp3" preload="auto"></audio>
       
       </a-assets>
 		
@@ -98,7 +99,13 @@
 	<a-entity gltf-model="#modelo7" scale="0.09 0.09 0.09" rotation="-90 90 0" position="0 0 0" class="clickable" gesture-handler soundhandler></a-entity>
 			
 	</a-marker>
-	
+	       
+	<a-marker id="nueve" type="barcode" value="3" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;">
+			
+      <a-entity gltf-model="#modelo8" scale="1 1 1" rotation="180 90 -90" class="clickable" gesture-handler soundhandler></a-entity>
+        
+			
+       </a-marker>
 	
 			
 			<a-entity id="audio1" sound="src: #sound" autoplay="false"></a-entity>
@@ -109,6 +116,7 @@
 	       		<a-entity id="audio6" sound="src: #sound5" autoplay="false"></a-entity>
 	       		<a-entity id="audio7" sound="src: #sound6" autoplay="false"></a-entity>
 	       		<a-entity id="audio8" sound="src: #sound7" autoplay="false"></a-entity>
+	       		<a-entity id="audio9" sound="src: #sound8" autoplay="false"></a-entity>
 	       
 			<a-entity camera></a-entity>
 			
@@ -126,6 +134,7 @@ var entity5 = document.querySelector('#audio5');
 var entity6 = document.querySelector('#audio6');
 var entity7 = document.querySelector('#audio7');
 var entity8 = document.querySelector('#audio8');
+var entity9 = document.querySelector('#audio9');
 
 
 if (document.querySelector('#uno').object3D.visible == true) {
@@ -136,6 +145,7 @@ entity5.components.sound.pauseSound();
 entity6.components.sound.pauseSound();
 entity7.components.sound.pauseSound();
 entity8.components.sound.pauseSound();
+entity9.components.sound.pauseSound();
 	
 entity.components.sound.playSound();
 
@@ -148,6 +158,7 @@ entity5.components.sound.pauseSound();
 entity6.components.sound.pauseSound();
 entity7.components.sound.pauseSound();
 entity8.components.sound.pauseSound();
+entity9.components.sound.pauseSound();
 
 entity2.components.sound.playSound();
 
@@ -160,6 +171,7 @@ entity5.components.sound.pauseSound();
 entity6.components.sound.pauseSound();
 entity7.components.sound.pauseSound();
 entity8.components.sound.pauseSound();
+entity9.components.sound.pauseSound();
 
 entity3.components.sound.playSound();
 
@@ -172,6 +184,7 @@ entity5.components.sound.pauseSound();
 entity6.components.sound.pauseSound();
 entity7.components.sound.pauseSound();
 entity8.components.sound.pauseSound();
+entity9.components.sound.pauseSound();
 
 entity4.components.sound.playSound();
 
@@ -184,6 +197,7 @@ entity4.components.sound.pauseSound();
 entity6.components.sound.pauseSound();
 entity7.components.sound.pauseSound();
 entity8.components.sound.pauseSound();
+entity9.components.sound.pauseSound();
 
 entity5.components.sound.playSound();
 
@@ -196,6 +210,7 @@ entity4.components.sound.pauseSound();
 entity5.components.sound.pauseSound();
 entity7.components.sound.pauseSound();
 entity8.components.sound.pauseSound();
+entity9.components.sound.pauseSound();
 
 entity6.components.sound.playSound();
 
@@ -208,6 +223,7 @@ entity4.components.sound.pauseSound();
 entity5.components.sound.pauseSound();
 entity6.components.sound.pauseSound();
 entity8.components.sound.pauseSound();
+entity9.components.sound.pauseSound();
 
 entity7.components.sound.playSound();
 
@@ -220,8 +236,22 @@ entity4.components.sound.pauseSound();
 entity5.components.sound.pauseSound();
 entity6.components.sound.pauseSound();
 entity7.components.sound.pauseSound();
+entity9.components.sound.pauseSound();
 
 entity8.components.sound.playSound();
+
+}
+else if (document.querySelector('#nueve').object3D.visible == true) {
+entity2.components.sound.pauseSound();
+entity.components.sound.pauseSound();
+entity3.components.sound.pauseSound();
+entity4.components.sound.pauseSound();
+entity5.components.sound.pauseSound();
+entity6.components.sound.pauseSound();
+entity7.components.sound.pauseSound();
+entity8.components.sound.pauseSound();
+
+entity9.components.sound.playSound();
 
 }
 
@@ -234,6 +264,7 @@ entity5.components.sound.pauseSound();
 entity6.components.sound.pauseSound();
 entity7.components.sound.pauseSound();
 entity8.components.sound.pauseSound();
+entity9.components.sound.pauseSound();
 	
  }
 }
